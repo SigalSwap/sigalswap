@@ -3,8 +3,7 @@
   "private": true,
   "workspaces": [
     "packages/sdk",
-    "site/app",
-    "site/prelaunch"
+    "site/app"
   ],
   "overrides": {
     "@aztec/foundation": "4.3.0"

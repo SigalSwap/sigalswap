@@ -12,10 +12,5 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    // npm workspaces hoists deps to the repo root — tell Vite to look there
-    modules: [
-      path.resolve(__dirname, "node_modules"),
-      path.resolve(__dirname, "../../node_modules"),
-    ],
   },
 });
