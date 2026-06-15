@@ -1,0 +1,33 @@
+SigalSwap — Licensing Overview
+Copyright (c) 2026 SigalSwap LLC
+
+This repository is MULTI-LICENSED on a per-component basis. There is no single
+license that governs the whole tree. Every source file carries an
+`SPDX-License-Identifier` header, and each component directory below contains
+the full text of its own license. Where a file's SPDX header or a directory's
+LICENSE file specifies a license, THAT license governs the file or directory.
+
+Component licenses:
+
+  protocol/core        Business Source License 1.1   (see protocol/core/LICENSE)
+  protocol/factory     Business Source License 1.1   (see protocol/factory/LICENSE)
+  protocol/periphery   MIT                            (see protocol/periphery/LICENSE)
+  protocol/lp-token    Apache License 2.0             (see protocol/lp-token/LICENSE,
+                                                        protocol/lp-token/NOTICE)
+  packages/sdk         MIT                            (see packages/sdk/package.json)
+  site/prelaunch       GPL-3.0-only                   (see site/prelaunch/package.json)
+
+Notes:
+
+- protocol/lp-token is derived in part from aztec-packages
+  (noir-projects/noir-contracts/contracts/app/token_contract), Copyright
+  Spilsbury Holdings Ltd, licensed under Apache-2.0. The Apache-2.0 license text
+  and the required attribution are in protocol/lp-token/LICENSE and
+  protocol/lp-token/NOTICE.
+- The Business Source License 1.1 (core, factory) is a source-available license
+  with a Change Date after which the code converts to an open-source license;
+  see the per-component LICENSE for the exact Additional Use Grant and Change
+  Date terms.
+
+If you redistribute, import, or build on any component, comply with the license
+of that specific component as identified by its SPDX header and LICENSE file.

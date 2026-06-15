@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Twitter / X banner composite (1500x500).
+  - Background: banner-bg.png (an AI-generated image, cropped to 1500x500).
+    Replace banner-bg.png to swap the artwork; this SVG stays the same.
+  - Foreground: SigalSwap wordmark, tagline, and a small rose-in-shield mark.
+  - Profile-picture overlay on Twitter sits in the bottom-left of the banner,
+    so all brand content is positioned on the right half of the frame.
+  Rendered via rsvg-convert in generate-icons.sh.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <!-- AI artwork background -->
+  <image href="banner-bg.png" x="0" y="0" width="1500" height="500"/>
+
+  <!-- Wordmark -->
+  <text x="870" y="270" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="100" font-weight="700" fill="#fafafa" letter-spacing="-2">SigalSwap</text>
+
+  <!-- Tagline -->
+  <text x="873" y="325" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#fafafa" opacity="0.92">Privacy-preserving AMM on Aztec</text>
+</svg>

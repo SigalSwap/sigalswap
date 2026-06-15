@@ -1,0 +1,56 @@
+/*
+ * SigalSwap Design Tokens
+ * ========================
+ * All colors, typography, and spacing are defined here.
+ * Change a value here → the entire site updates.
+ *
+ * Named after Sigalion (Σιγαλίων), god of silence.
+ * Visual identity: deep violet on dark, restrained, sophisticated.
+ */
+
+:root {
+  /* ─── Brand ───────────────────────────────────────────── */
+  --primary: #7c3aed;              /* Deep violet — main accent (buttons, fills, headings, decorative icons) */
+  --primary-hover: #6d28d9;        /* Violet hover/pressed */
+  --primary-foreground: #fafafa;   /* Text on primary surfaces */
+  --link: #a78bfa;                 /* Accessible violet for link/CTA TEXT — ~7:1 on bg/card, clears WCAG AA 4.5:1. --primary (#7c3aed) is ~3.4:1 and is reserved for large/non-text elements where 3:1 suffices. */
+
+  /* ─── Backgrounds ─────────────────────────────────────── */
+  --background: #09090b;           /* Page background */
+  --card: #111114;                 /* Cards, panels, elevated surfaces */
+  --popover: #111114;              /* Dropdowns, tooltips, modals */
+
+  /* ─── Text ────────────────────────────────────────────── */
+  --foreground: #fafafa;           /* Primary text */
+  --card-foreground: #fafafa;      /* Text on cards */
+  --popover-foreground: #fafafa;   /* Text in popovers */
+  --muted-foreground: #a1a1aa;     /* Secondary / muted text */
+
+  /* ─── Secondary / Muted / Accent ──────────────────────── */
+  --secondary: #1c1c20;            /* Secondary buttons, subtle fills */
+  --secondary-foreground: #fafafa;
+  --muted: #1c1c20;                /* Muted backgrounds */
+  --accent: #1c1c20;               /* Hover state in menus, nav */
+  --accent-foreground: #fafafa;
+
+  /* ─── Borders ─────────────────────────────────────────── */
+  --border: #27272a;               /* Default border */
+  --border-hover: #3f3f46;         /* Border hover state */
+  --input: #27272a;                /* Input field borders */
+
+  /* ─── State ───────────────────────────────────────────── */
+  --success: #22c55e;
+  --warning: #eab308;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+
+  /* ─── Focus Ring ──────────────────────────────────────── */
+  --ring: #7c3aed;
+
+  /* ─── Typography ──────────────────────────────────────── */
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* ─── Radius ──────────────────────────────────────────── */
+  --radius: 0.75rem;
+}

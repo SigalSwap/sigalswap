@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.test.ts",
+    "src/__test__/**",
+    "src/e2e/**",
+    "src/artifacts/AbusivePair.ts",
+    "src/artifacts/FlashBorrower.ts",
+    "src/artifacts/MockFactory.ts",
+    "src/artifacts/MockPairV2.ts"
+  ]
+}

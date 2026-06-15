@@ -1,0 +1,24 @@
+[package]
+name = "sigalswap_periphery"
+type = "contract"
+authors = ["SigalSwap"]
+# Floor is >=0.1.0 because Nargo rejects pre-release version requirements
+# (">=1.0.0-beta.21" errors; ">=1.0.0" would exclude the beta we build with).
+# The toolchain is pinned to Noir 1.0.0-beta.21 (Aztec v4.3.0) in README and
+# drift-guarded by lp-token's class_id_probe test.
+compiler_version = ">=0.1.0"
+
+[dependencies]
+aztec = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/aztec" }
+sigalswap_core = { path = "../core" }
+sigalswap_factory = { path = "../factory" }
+token = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/noir-contracts/contracts/app/token_contract" }
+uint_note = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/uint-note" }
+
+# NOTE: sigalswap_lp_token and the abusive_pair / mock_factory test fixtures are
+# intentionally NOT dependencies here -- all are used only by the TXE tests,
+# which now live in the sibling `sigalswap_periphery_tests` crate. (lp-token
+# remains in this artifact's build graph transitively via sigalswap_core;
+# abusive_pair / mock_factory are pure test fixtures and are fully removed.)
+# Keeping fixtures out of this production build graph makes the deployed Router
+# class_id reproducible from clean source.

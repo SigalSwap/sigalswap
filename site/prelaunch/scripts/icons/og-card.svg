@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OG card composite (1200x630).
+  - Background: og-bg.png (an AI-generated image, cropped to 1200x630).
+    Replace og-bg.png to swap the artwork; this SVG stays the same.
+  - Foreground: SigalSwap wordmark, tagline, URL, and a small rose-in-shield mark.
+  Rendered via rsvg-convert in generate-icons.sh.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- AI artwork background -->
+  <image href="og-bg.png" x="0" y="0" width="1200" height="630"/>
+
+  <!-- Logo: rose-in-shield mark, top-right corner. Scaled 96x96 (transform: scale=4 on 24x24 viewBox). -->
+  <g transform="translate(1064, 56) scale(4)" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+    <g transform="translate(7, 6.5) scale(0.42)" stroke-width="1.6">
+      <path d="M17 10h-1a4 4 0 1 1 4-4v.534"/>
+      <path d="M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"/>
+      <path d="M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2"/>
+      <path d="M9.77 12C4 15 2 22 2 22"/>
+      <circle cx="17" cy="8" r="2"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="500" y="340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="100" font-weight="700" fill="#fafafa" letter-spacing="-2">SigalSwap</text>
+
+  <!-- Tagline -->
+  <text x="503" y="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32" font-weight="400" fill="#fafafa" opacity="0.92">Privacy-preserving AMM on Aztec</text>
+
+  <!-- Footer URL -->
+  <text x="503" y="555" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="#a1a1aa" letter-spacing="0.5">sigalswap.com</text>
+</svg>

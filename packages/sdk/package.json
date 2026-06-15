@@ -1,0 +1,46 @@
+{
+  "name": "@sigalswap/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for SigalSwap - Privacy-preserving AMM on Aztec",
+  "license": "MIT",
+  "author": "SigalSwap LLC",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc && mkdir -p dist/artifacts && node -e \"const fs=require('fs');const skip=/^(abusive_pair|flash_borrower|mock_factory|mock_pair_v2)-/;for(const f of fs.readdirSync('src/artifacts').filter(x=>x.endsWith('.json')&&!skip.test(x))){fs.copyFileSync('src/artifacts/'+f,'dist/artifacts/'+f);}\"",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "node --import tsx/esm --test --test-concurrency=1 src/e2e/e2e.test.ts src/e2e/e2e-negative.test.ts src/e2e/e2e-properties.test.ts src/e2e/e2e-events-governance.test.ts src/e2e/e2e-coverage-additions.test.ts",
+    "codegen": "aztec codegen --force ../../protocol/periphery/target -o src/artifacts && aztec codegen --force ../../protocol/factory/target -o src/artifacts && aztec codegen --force ../../protocol/core/target -o src/artifacts && aztec codegen --force ../../protocol/lp-token/target -o src/artifacts && aztec codegen --force ../../protocol/test-contracts/flash-borrower/target -o src/artifacts && aztec codegen --force ../../protocol/test-contracts/mock-pair-v2/target -o src/artifacts && aztec codegen --force ../../protocol/test-contracts/abusive-pair/target -o src/artifacts && aztec codegen --force ../../protocol/test-contracts/mock-factory/target -o src/artifacts",
+    "postcodegen": "node scripts/copy-artifacts.mjs"
+  },
+  "peerDependencies": {
+    "@aztec/aztec.js": ">=4.0.0 <5.0.0"
+  },
+  "devDependencies": {
+    "@aztec/accounts": "^4.3.0",
+    "@aztec/aztec.js": "4.3.0",
+    "@aztec/noir-contracts.js": "4.3.0",
+    "@aztec/wallets": "^4.3.0",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/typescript-checker": "^9.6.1",
+    "@stryker-mutator/vitest-runner": "^9.6.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.0",
+    "vitest": "^4.1.2"
+  }
+}

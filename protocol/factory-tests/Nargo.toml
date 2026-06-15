@@ -1,0 +1,19 @@
+[package]
+name = "sigalswap_factory_tests"
+type = "contract"
+authors = ["SigalSwap"]
+# Test-only crate: hosts the TXE integration tests for sigalswap_factory so the
+# mock_pair_v2 test fixture stays OUT of the production sigalswap_factory build
+# graph (keeping the deployed Factory class_id reproducible from clean source).
+compiler_version = ">=0.1.0"
+
+[dependencies]
+aztec = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/aztec" }
+token = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/noir-contracts/contracts/app/token_contract" }
+
+sigalswap_factory = { path = "../factory" }
+sigalswap_core = { path = "../core" }
+sigalswap_lp_token = { path = "../lp-token" }
+
+# Test-fixture contract (formerly in factory's [dependencies]).
+mock_pair_v2 = { path = "../test-contracts/mock-pair-v2" }

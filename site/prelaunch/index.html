@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- ============ Document basics ============ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- ============ Title / description / canonical ============ -->
+    <title>SigalSwap — Privacy-Preserving AMM on Aztec</title>
+    <meta name="description" content="SigalSwap is a privacy-preserving automated market maker on Aztec L2. Swap and provide liquidity without exposing your wallet or trade history on-chain." />
+    <link rel="canonical" href="https://sigalswap.com/" />
+
+    <!-- ============ Robots ============ -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- ============ Theme color (browser chrome + Discord embed accent) ============ -->
+    <meta name="theme-color" content="#09090b" />
+
+    <!-- ============ Open Graph (Facebook, LinkedIn, Discord, Slack, iMessage, WhatsApp, Telegram, Mastodon, Bluesky) ============ -->
+    <meta property="og:site_name" content="SigalSwap" />
+    <meta property="og:title" content="SigalSwap — Privacy-Preserving AMM on Aztec" />
+    <meta property="og:description" content="A privacy-preserving automated market maker on Aztec L2. Swap and provide liquidity without exposing your wallet or trade history on-chain." />
+    <meta property="og:url" content="https://sigalswap.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://sigalswap.com/og/og-default.png" />
+    <meta property="og:image:secure_url" content="https://sigalswap.com/og/og-default.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SigalSwap — privacy-preserving AMM on Aztec, on a deep violet background." />
+
+    <!-- ============ Twitter / X Cards ============ -->
+    <!-- twitter:card forces the large-image layout; OG fallback alone won't. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SigalSwap" />
+    <meta name="twitter:creator" content="@SigalSwap" />
+    <meta name="twitter:title" content="SigalSwap — Privacy-Preserving AMM on Aztec" />
+    <meta name="twitter:description" content="A privacy-preserving automated market maker on Aztec L2. Swap and provide liquidity without exposing your wallet or trade history on-chain." />
+    <meta name="twitter:image" content="https://sigalswap.com/og/og-default.png" />
+    <meta name="twitter:image:alt" content="SigalSwap — privacy-preserving AMM on Aztec, on a deep violet background." />
+
+    <!-- ============ Favicons / Apple touch / PWA ============ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="SigalSwap" />
+    <meta name="application-name" content="SigalSwap" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- ============ Structured data (Organization + WebSite + SoftwareApplication) ============ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://sigalswap.com/#org",
+            "name": "SigalSwap",
+            "legalName": "SigalSwap LLC",
+            "url": "https://sigalswap.com/",
+            "logo": "https://sigalswap.com/og/logo.png",
+            "sameAs": [
+              "https://github.com/SigalSwap",
+              "https://x.com/SigalSwap"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://sigalswap.com/#website",
+            "url": "https://sigalswap.com/",
+            "name": "SigalSwap",
+            "publisher": { "@id": "https://sigalswap.com/#org" },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://sigalswap.com/#software",
+            "name": "SigalSwap Protocol",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Aztec L2",
+            "description": "Privacy-preserving automated market maker on Aztec. Constant-product swaps and liquidity provision with private LP positions and private swap caller identity.",
+            "license": "https://spdx.org/licenses/BUSL-1.1.html",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": "https://sigalswap.com/#org" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+[package]
+name = "sigalswap_core_tests"
+type = "contract"
+authors = ["SigalSwap"]
+# Test-only crate: hosts the TXE integration tests for sigalswap_core so that
+# the test-fixture contracts (flash_borrower / self_address_test / hostile_token)
+# stay OUT of the production sigalswap_core build graph. Noir has no
+# dev-dependencies and the compiler folds every build-graph contract's storage
+# into the compiling artifact's outputs.globals, so keeping the fixtures here
+# (not in core's [dependencies]) is what makes the deployed Pair class_id
+# reproducible from clean production source.
+compiler_version = ">=0.1.0"
+
+[dependencies]
+aztec = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/aztec" }
+uint_note = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/uint-note" }
+token = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/noir-contracts/contracts/app/token_contract" }
+
+# Contract under test + its production LP token.
+sigalswap_core = { path = "../core" }
+sigalswap_lp_token = { path = "../lp-token" }
+
+# Test-fixture contracts (formerly in core's [dependencies]).
+flash_borrower = { path = "../test-contracts/flash-borrower" }
+self_address_test = { path = "../test-contracts/self-address-test" }
+hostile_token = { path = "../test-contracts/hostile-token" }

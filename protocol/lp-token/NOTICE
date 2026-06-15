@@ -1,0 +1,12 @@
+SigalSwap LP Token
+Copyright (c) 2026 SigalSwap LLC
+
+This product includes software derived from aztec-packages
+(noir-projects/noir-contracts/contracts/app/token_contract),
+Copyright Spilsbury Holdings Ltd, licensed under the Apache License, Version 2.0.
+
+You may obtain a copy of the Apache License, Version 2.0 at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+See the LICENSE file in this directory for the full license text.

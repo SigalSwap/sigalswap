@@ -1,0 +1,28 @@
+[package]
+name = "sigalswap_core"
+type = "contract"
+authors = ["SigalSwap"]
+# Floor is >=0.1.0 because Nargo rejects pre-release version requirements
+# (">=1.0.0-beta.21" errors; ">=1.0.0" would exclude the beta we build with).
+# The toolchain is pinned to Noir 1.0.0-beta.21 (Aztec v4.3.0) in README and
+# drift-guarded by lp-token's class_id_probe test.
+compiler_version = ">=0.1.0"
+
+[dependencies]
+# All deps from aztec-packages monorepo to ensure consistent resolution
+aztec = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/aztec" }
+uint_note = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/aztec-nr/uint-note" }
+token = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "v4.3.0", directory = "noir-projects/noir-contracts/contracts/app/token_contract" }
+
+# SigalSwap-owned LP token. The pair derives its LP token's address
+# deterministically from its own address + this contract's class_id, so the
+# LP token identity is cryptographically bound without being passed in as
+# a constructor argument.
+sigalswap_lp_token = { path = "../lp-token" }
+
+# NOTE: test-fixture contracts (flash_borrower / self_address_test /
+# hostile_token) are intentionally NOT dependencies here -- they live in the
+# sibling `sigalswap_core_tests` crate's [dependencies] instead. Keeping them out
+# of this production build graph is what makes the deployed Pair class_id
+# reproducible from clean source (the compiler folds every build-graph contract's
+# storage into outputs.globals, which feeds artifact_hash -> class_id).

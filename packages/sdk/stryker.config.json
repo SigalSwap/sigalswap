@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "testRunner": "vitest",
+  "checkers": ["typescript"],
+  "tsconfigFile": "tsconfig.json",
+  "coverageAnalysis": "all",
+  "vitest": {
+    "related": false
+  },
+  "reporters": ["html", "json", "clear-text", "progress"],
+  "jsonReporter": {
+    "fileName": "reports/mutation/mutation.json"
+  },
+  "mutate": [
+    "src/router.ts",
+    "src/pair.ts",
+    "src/pair-verification.ts",
+    "src/protocol-fee.ts"
+  ],
+  "thresholds": {
+    "high": 95,
+    "low": 80,
+    "break": null
+  },
+  "htmlReporter": {
+    "fileName": "reports/mutation/index.html"
+  },
+  "tempDirName": ".stryker-tmp",
+  "ignorePatterns": [
+    "dist",
+    "src/e2e",
+    ".stryker-tmp",
+    "reports"
+  ]
+}

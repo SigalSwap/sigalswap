@@ -1,0 +1,17 @@
+{
+  "name": "@sigalswap/mutation-tester",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Noir mutation tester for SigalSwap protocol contracts. Operator tooling, not shipped.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "run": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.0"
+  }
+}

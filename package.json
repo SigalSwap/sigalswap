@@ -1,0 +1,12 @@
+{
+  "name": "sigalswap",
+  "private": true,
+  "workspaces": [
+    "packages/sdk",
+    "site/app",
+    "site/prelaunch"
+  ],
+  "overrides": {
+    "@aztec/foundation": "4.3.0"
+  }
+}
