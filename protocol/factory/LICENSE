@@ -9,13 +9,29 @@ Parameters
 
 Licensor:             SigalSwap LLC
 
-Licensed Work:        SigalSwap Core Contracts v1.0
+Licensed Work:        SigalSwap Factory Contracts v1.0
                       The Licensed Work is (c) 2026 SigalSwap LLC.
 
-Additional Use Grant: None
+Additional Use Grant: You may make production use of the Licensed Work,
+                      including to integrate with; build applications,
+                      interfaces, wallets, or other products on top of;
+                      create liquidity pools within; and route
+                      transactions through the SigalSwap protocol as
+                      deployed by the Licensor. You may NOT use the
+                      Licensed Work, or any derivative work of it, to
+                      deploy or operate an automated market maker,
+                      decentralized exchange, or other token-swap
+                      protocol that competes with the SigalSwap
+                      protocol. Deploying the Licensed Work or a
+                      derivative work as a production token-swap
+                      protocol other than the Licensor's canonical
+                      deployment is a competing use and is not
+                      permitted under this grant.
 
-Change Date:          The earlier of 2028-XX-XX or a date specified by
-                      SigalSwap LLC
+Change Date:          The fourth anniversary of the first publicly
+                      available distribution of the Licensed Work under
+                      this License, or any earlier date specified by
+                      SigalSwap LLC.
 
 Change License:       MIT License
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SigalSwap horizontal logo lockup (mark + wordmark) for the Aztec ecosystem
+  directory and any wide logo slot that expects the project NAME, not just an icon.
+
+  Matches the live site header (src/components/Layout.tsx): the rose-in-shield
+  mark next to "SigalSwap" in Inter SemiBold (600) with tight tracking. Mark and
+  wordmark share the brand violet (primary #7c3aed from src/styles/theme.css), so
+  the logo reads on both dark and light backgrounds. The mark-to-wordmark gap is
+  tightened to about half the site header's default spacing.
+
+  No outer padding: the viewBox is cropped to the rendered ink (measured at 2x:
+  content box x32 y21, 504 wide x 118 tall), so the only whitespace is the gap
+  between mark and wordmark. Whoever places it controls the surrounding space.
+
+  FONT NOTE: the wordmark is live text in Inter. For a pixel-perfect, portable
+  asset, open in Figma/Inkscape and convert the text to outlines before final
+  export, OR make sure Inter is installed when rasterizing to PNG (it is the
+  project brand font; install via the font-inter Homebrew cask). The mark is
+  vector paths and renders correctly everywhere regardless.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="32 21 504 118" width="504" height="118">
+  <!-- Rose-in-shield mark (violet), vertically centered -->
+  <g transform="translate(16, 16) scale(5.3333)"
+     fill="none" stroke="#7c3aed" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Shield -->
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+    <!-- Rose inside the shield -->
+    <g transform="translate(7, 6.5) scale(0.42)" stroke-width="2">
+      <path d="M17 10h-1a4 4 0 1 1 4-4v.534"/>
+      <path d="M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"/>
+      <path d="M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2"/>
+      <path d="M9.77 12C4 15 2 22 2 22"/>
+      <circle cx="17" cy="8" r="2"/>
+    </g>
+  </g>
+
+  <!-- Wordmark: Inter SemiBold, tight tracking, white -->
+  <text x="150" y="108"
+        font-family="Inter, 'Inter Variable', system-ui, -apple-system, sans-serif"
+        font-weight="600" font-size="80" letter-spacing="-2" fill="#7c3aed">SigalSwap</text>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SigalSwap projects-page tile (512x512) — for the Aztec ecosystem directory
+  and other places that want a self-contained square avatar.
+
+  Same mark as logo.svg / Logo.tsx (rose [sub rosa] inside a shield [privacy]),
+  re-laid-out for a small tile: centered with an 80% safe zone, a rounded-square
+  brand-background, a faint violet glow, and a hairline border so it reads on the
+  dark directory page. Colors match src/styles/theme.css
+  (primary #7c3aed, background #09090b, border #27272a).
+
+  This is a STANDALONE variant — it does not replace logo.svg. If the core mark
+  changes, update logo.svg / Logo.tsx first, then mirror the path data here.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="42%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Brand background -->
+  <rect width="512" height="512" rx="112" fill="#09090b"/>
+  <!-- Soft violet glow behind the mark -->
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+
+  <!-- Rose-in-shield mark, centered with breathing room -->
+  <g transform="translate(88, 85) scale(14)"
+     fill="none" stroke="#7c3aed" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Shield -->
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+    <!-- Rose, scaled down and centered inside the shield -->
+    <g transform="translate(7, 6.5) scale(0.42)" stroke-width="2">
+      <path d="M17 10h-1a4 4 0 1 1 4-4v.534"/>
+      <path d="M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"/>
+      <path d="M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2"/>
+      <path d="M9.77 12C4 15 2 22 2 22"/>
+      <circle cx="17" cy="8" r="2"/>
+    </g>
+  </g>
+
+  <!-- Hairline border to define the tile edge on dark backgrounds -->
+  <rect x="1" y="1" width="510" height="510" rx="111" fill="none" stroke="#27272a" stroke-width="2"/>
+</svg>
